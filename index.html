@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/style.css">
+  <link rel="stylesheet" href="css/tinyslider.css">
+  <!-- Google Analytics -->
+  <!-- OneTrust Cookies Consent Notice start for touchvpn.net -->
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8"
+    data-domain-script="dce7a082-4bd7-4f4f-9c5c-7540892e6087"></script>
+  <script type="text/javascript">
+    function OptanonWrapper() { }
+  </script>
+  <!-- OneTrust Cookies Consent Notice end for touchvpn.net -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-56907699-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- End Google Analytics -->
+  <script src="js/animatedScroll.js"></script>
+  <title>猴急加速器</title>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <div class="header__inner">
+      <div class="header__logo js--data-nav" data-nav-to="main">
+        <img class="header__logo-icon" src="images/logo.svg" alt="logo" />
+        <div class="header__logo-name">
+          猴急加速器
+        </div>
+      </div>
+      <ul class="header__nav">
+        <li class="header__nav-item js--data-nav" data-nav-to="about">About</li>
+        <li class="header__nav-item js--data-nav" data-nav-to="platforms">Platforms</li>
+        <li class="header__nav-item js--data-nav" data-nav-to="servers">Servers</li>
+        <!-- <li class="header__nav-item js--data-nav" data-nav-to="price">Price</li> -->
+        <li class="header__nav-item js--data-nav" data-nav-to="feedback">Feedback</li>
+        <!-- <li class="header__nav-lang">
+          <a href="#">RU</a>
+          <a href="#" class="active">ENG</a>
+        </li> -->
+      </ul>
+      <a href="index.html#" class="header__get-btn js--app-link" target="_blank">Get 猴急加速器</a>
+      <div class="header__mobile-btn js--toggle-nav">
+        <img class="header__mobile-btn-icon header__mobile-btn-icon_open" src="images/hamburger.svg" alt="open" />
+        <img class="header__mobile-btn-icon header__mobile-btn-icon_close" src="images/close.svg" alt="close" />
+      </div>
+    </div>
+  </header>
+  <section id="main" class="main-section">
+    <div class="main-section__circle-wrapper">
+      <div class="main-section__circle-wrapper-inner">
+        <div class="main-section__circle"></div>
+      </div>
+    </div>
+    <div class="main-section__inner">
+      <div class="main-section__left">
+        <div class="main-section__status-wrapper">
+          <div class="main-section__status-wrapper-progress">
+            <svg width="5" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width='100%' height='100%' fill='none' stroke='#007AFF' stroke-width='1' stroke-dasharray='5'
+                stroke-dashoffset='0' stroke-linecap='square'></rect>
+            </svg>
+          </div>
+          <div id="status-real" class="main-section__status-wrapper-row">
+            <div class="main-section__status-wrapper-checkbox"></div>
+            <div class="main-section__status-wrapper-value">
+              <div class="main-section__status">
+                <span class="main-section__status-title">您的真实状态:</span>
+                <span id="status" class="main-section__status-name">无保护</span>
+              </div>
+              <div class="main-section__info">
+                <div class="main-section__info-field">
+                  <span>IP:</span>
+                  <span id="ip-real" class="main-section__info-field-name"></span>
+                </div>
+                <div class="main-section__info-field main-section__info-field_isp">
+                  <span>ISP:</span>
+                  <span id="isp-real" class="main-section__info-field-name"></span>
+                </div>
+                <div class="main-section__info-field">
+                  <span>Location:</span>
+                  <span id="location-real"
+                    class="main-section__info-field-name main-section__info-field-name_location"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="status-touch" class="main-section__status-wrapper-row main-section__status-wrapper-row_disabled">
+            <div class="main-section__status-wrapper-checkbox"></div>
+            <div class="main-section__status-wrapper-value">
+              <div class="main-section__status">
+                <span class="main-section__status-title">您的 猴急加速器 状态:</span>
+                <span id="status-touch-name" class="main-section__status-name main-section__status-name_changed"></span>
+              </div>
+              <div id="status-touch-info" class="main-section__info main-section__info_hidden">
+                <div class="main-section__info-field">
+                  <span>IP:</span>
+                  <span id="ip" class="main-section__info-field-name"></span>
+                </div>
+                <div class="main-section__info-field main-section__info-field_isp">
+                  <span>ISP:</span>
+                  <span id="isp" class="main-section__info-field-name"></span>
+                </div>
+                <div class="main-section__info-field">
+                  <span>Location:</span>
+                  <span id="location"
+                    class="main-section__info-field-name main-section__info-field-name_location"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-section__content-wrapper">
+          <div class="main-section__title">
+            猴急加速器
+          </div>
+          <div class="main-section__desc">
+            VPN 服务可确保您的手机、平板电脑和桌面安全且私密
+          </div>
+          <div>
+            <a href="index.html#" class="button button_large js--app-link" target="_blank">
+              Get 猴急加速器
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="main-section__right">
+        <div class="main-section__scale-circle-wrapper">
+          <div class="main-section__scale-circle"></div>
+        </div>
+        <div class="app-screen">
+          <div class="app-screen__inner">
+            <div class="app-screen__header">
+              <img src="images/icons/burger-menu.svg" alt="menu">
+              <span>猴急加速器</span>
+              <img src="images/icons/share.svg" alt="share">
+            </div>
+            <div class="app-screen__location">
+              You are in <span class="app-screen__location-name">Russia</span>
+            </div>
+            <div id="switch-title" class="app-screen__switch-title">
+              Switch location to
+            </div>
+            <div id="chosen-location" class="app-screen__choosen-location">
+              United Kingdom
+              <img src="images/icons/dropdown-arrow.svg" alt="arrow">
+            </div>
+            <div class="app-screen__map-wrapper">
+              <div class="app-screen__inner-circle">
+                <div class="app-screen__inner-circle_left"><span></span></div>
+                <div class="app-screen__inner-circle_right"><span></span></div>
+              </div>
+              <div class="app-screen__outher-circle">
+                <div class="app-screen__outher-circle_left"><span></span></div>
+                <div class="app-screen__outher-circle_right"><span></span></div>
+              </div>
+              <div id="connect-btn" class="app-screen__connect-btn">
+                Connect
+                <div class="app-screen__scale-circle"></div>
+              </div>
+            </div>
+            <div class="app-screen__data">
+              <div class="app-screen__data-item">
+                <div class="app-screen__data-title">
+                  4.6 <span class="app-screen__data-metric">KB</span>
+                </div>
+                <div class="app-screen__data-desc">Incoming</div>
+              </div>
+              <div class="app-screen__data-separator"></div>
+              <div class="app-screen__data-item">
+                <div class="app-screen__data-title">
+                  9.3 <span class="app-screen__data-metric">KB</span>
+                </div>
+                <div class="app-screen__data-desc">Outcoming</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="why-section">
+    <div class="why-section__circle">
+      <div class="why-section__circle-inner"></div>
+    </div>
+    <div class="why-section__inner">
+      <h2 class="why-section__title">为什么选择 猴急加速器？</h2>
+      <div id="about-slider-mobile" class="why-section__info-list js--about-slider-mobile">
+        <div class="why-section__info-item-wrapper">
+          <div class="why-section__info-item">
+            <div class="why-section__info-item-img-title">
+              <img src="images/icons/access.svg" alt="access" class="why-section__info-item-icon">
+              <h4 class="why-section__info-item-title">访问任何国家的任何网站</h4>
+            </div>
+            <div class="why-section__info-item-desc">
+              绕过地理限制，无论您身在何处，都能解锁任何网站！访问被政府、学校或工作场所屏蔽或审查的网站。
+			  逃避防火墙以解锁 Facebook、观看 YouTube 并规避 VOIP 限制。TouchVPN 通过其免费 VPN 应用程序解锁所有内容
+            </div>
+          </div>
+        </div>
+        <div class="why-section__info-item-wrapper">
+          <div class="why-section__info-item">
+            <div class="why-section__info-item-img-title">
+              <img src="images/icons/protect.svg" alt="access" class="why-section__info-item-icon">
+              <h4 class="why-section__info-item-title">保护您的数据免受黑客攻击</h4>
+            </div>
+            <div class="why-section__info-item-desc">
+              如果您连接到公共 WiFi 热点，黑客就可以访问您的姓名、密码和个人信息。
+			  猴急加速器 会对您的数据进行加密，并为您提供银行级安全性，以便在您连接到不安全的 WiFi 热点时提供最佳保护。
+            </div>
+          </div>
+        </div>
+        <div class="why-section__info-item-wrapper">
+          <div class="why-section__info-item">
+            <div class="why-section__info-item-img-title">
+              <img src="images/icons/surf.svg" alt="access" class="why-section__info-item-icon">
+              <h4 class="why-section__info-item-title">匿名上网</h4>
+            </div>
+            <div class="why-section__info-item-desc">
+             避免被 ISP 窥探并防止网站进行广告跟踪和定位。猴急加速器 会更改您的 IP 地址，
+			 因此您的在线身份是匿名的，并且您的互联网活动无法被窥探和企业访问。
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-section__btn-container">
+        <a href="index.html#" class="button button_large js--app-link" target="_blank">
+          下载客户端
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="platforms" class="native-apps-section">
+    <div class="native-apps-section__inner">
+      <div class="native-apps-section__left">
+        <div class="native-apps-section__image-wrapper">
+          <img src="images/OS-TouchVPN-off.png" alt="native apps" class="native-apps-section__image">
+          <img id="main-view-image" src="images/Mainview.png" class="native-apps-section__main-view" alt="Main view">
+        </div>
+      </div>
+      <div class="native-apps-section__right">
+        <div class="native-apps-section__circle"></div>
+        <h2 class="native-apps-section__title">适用于每个平台的友好本机应用程序</h2>
+        <div class="native-apps-section__desc">
+          使用 猴急加速器，您只需 3 个步骤，3 分钟内即可安全无限制地上网。不需要任何技术知识。VPN 适用于所有设备。注册、安装并按连接。
+        </div>
+        <h4 class="native-apps-section__links-title">可用于:</h4>
+        <div class="native-apps-section__links-list">
+          <a href="https://apps.apple.com/app/touch-vpn/id1239822785?ls=1"
+            class="native-apps-section__link js--download-app-link" target="_blank">
+            <img src="images/icons/mac-app-store.svg" alt="Mac app store">
+          </a>
+          <a href="https://apps.apple.com/app/touch-vpn-unlimited-proxy/id991744383?ls=1"
+            class="native-apps-section__link js--download-app-link" target="_blank">
+            <img src="images/icons/app-store.svg" alt="App store">
+          </a>
+          <a href="https://www.microsoft.com/p/touchvpn/9nblggh5gb3f"
+            class="native-apps-section__link js--download-app-link" target="_blank">
+            <img src="images/icons/microsoft.svg" alt="Microsoft">
+          </a>
+          <a href="https://firebasestorage.googleapis.com/v0/b/touchvpn-windows/o/Installer%2FTouchVPN_2.0.0.265.exe?alt=media&token=5c6fa4a8-faed-44a0-a4da-6d34d0f04722"
+            class="native-apps-section__link js--download-app-link" target="_blank">
+            <img src="images/icons/windows-msi.svg" alt="Windows MSI">
+          </a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/ighhnpmaabelnfcbbkijikgghajbiaml"
+            class="native-apps-section__link js--download-app-link" target="_blank">
+            <img src="images/icons/ms-edge.svg" alt="MS Edge">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.northghost.touchvpn"
+            class="native-apps-section__link js--download-app-link" target="_blank">
+            <img src="images/icons/google-play.svg" alt="Google play">
+          </a>
+          <a href="https://addons.mozilla.org/firefox/addon/touch-vpn/"
+            class="native-apps-section__link js--download-app-link" target="_blank">
+            <img src="images/icons/firefox.svg" alt="Firefox">
+          </a>
+          <a href="https://chrome.google.com/webstore/detail/touch-vpn-secure-and-unli/bihmplhobchoageeokmgbdihknkjbknd"
+            class="native-apps-section__link js--download-app-link" target="_blank">
+            <img src="images/icons/chrome-web-store.svg" alt="Chrome web store">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="servers" class="servers-section">
+    <div class="servers-section__inner">
+      <div class="servers-section__left">
+        <h2 class="servers-section__title">
+          服务器遍布全球 50 多个国家
+        </h2>
+        <div class="servers-section__desc">
+          我们在 多个国家/地区拥有超过百台服务器，为您提供极快的速度和无限的带宽。
+		  通过我们的 VPN 连接，您的互联网服务提供商不再会出现缓冲、限制或代理错误！
+        </div>
+        <div>
+          <a href="index.html#" class="button button_large js--app-link" target="_blank">
+            Get 猴急加速器
+          </a>
+        </div>
+      </div>
+      <div class="servers-section__right">
+        <div class="servers-section__map-wrapper">
+          <img src="images/servers-map.svg" alt="Servers">
+          <div class="servers-section__map-point" style="width: 10px; height: 10px; top: 177px; left: 36px;">
+          </div>
+          <div class="servers-section__map-point" style="width: 16px; height: 16px; top: 196px; left: 106px;">
+          </div>
+          <div class="servers-section__map-point" style="width: 16px; height: 16px; top: 260px; left: 176px;">
+          </div>
+          <div class="servers-section__map-point" style="width: 11px; height: 11px; top: 326px; left: 153px;">
+          </div>
+          <div class="servers-section__map-point" style="width: 9px; height: 9px; top: 416px; left: 263px;"></div>
+          <div class="servers-section__map-point" style="width: 11px; height: 11px; top: 477px; left: 232px;">
+          </div>
+          <div class="servers-section__map-point" style="width: 14px; height: 14px; top: 167px; left: 738px;">
+          </div>
+          <div class="servers-section__map-point" style="width: 8px; height: 8px; top: 289px; left: 715px;"></div>
+          <div class="servers-section__map-point" style="width: 10px; height: 10px; top: 448px; left: 708px;"></div>
+          <div class="servers-section__map-point" style="width: 16px; height: 16px; top: 385px; left: 650px;">
+          </div>
+          <div class="servers-section__map-point" style="width: 4px; height: 4px; top: 333px; left: 654px;"></div>
+          <div class="servers-section__map-point" style="width: 2px; height: 2px; top: 379px; left: 635px;"></div>
+          <div class="servers-section__map-point" style="width: 20px; height: 20px; top: 181px; left: 570px;">
+          </div>
+          <div class="servers-section__map-point" style="width: 9px; height: 9px; top: 332px; left: 568px;"></div>
+          <div class="servers-section__map-point" style="width: 7px; height: 7px; top: 177px; left: 482px;"></div>
+          <div class="servers-section__map-point" style="width: 7px; height: 7px; top: 182px; left: 422px;"></div>
+          <div class="servers-section__map-point" style="width: 4px; height: 4px; top: 216px; left: 419px;"></div>
+          <div class="servers-section__map-point" style="width: 4px; height: 4px; top: 219px; left: 381px;"></div>
+          <div class="servers-section__map-point" style="width: 4px; height: 4px; top: 238px; left: 371px;"></div>
+          <div class="servers-section__map-point" style="width: 4px; height: 4px; top: 241px; left: 408px;"></div>
+          <div class="servers-section__map-point" style="width: 4px; height: 4px; top: 260px; left: 402px;"></div>
+          <div class="servers-section__map-point" style="width: 7px; height: 7px; top: 282px; left: 380px;"></div>
+          <div class="servers-section__map-point" style="width: 5px; height: 5px; top: 278px; left: 421px;"></div>
+          <div class="servers-section__map-point" style="width: 2px; height: 2px; top: 252px; left: 425px;"></div>
+          <div class="servers-section__map-point" style="width: 2px; height: 2px; top: 269px; left: 435px;"></div>
+          <div class="servers-section__map-point" style="width: 5px; height: 5px; top: 250px; left: 463px;"></div>
+          <div class="servers-section__map-point" style="width: 5px; height: 5px; top: 283px; left: 468px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <div class="price-section__inner">
+      <h2 class="price-section__title">选择适合您的价格</h2>
+      <div class="price-section__list">
+        <div class="price-section__item">
+          <h4 class="price-section__item-plan-name">永久计划</h4>
+          <h3 class="price-section__item-plan-mon">
+            12<span class="price-section__item-plan-mon-char">¥</span>/50GB
+          </h3>
+          <h5 class="price-section__item-plan-year">12.00/CNY</h5>
+          <div class="price-section__item-list">
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">Anonymity</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">Encryption</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">Advertisement free</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">30+ virtual locations</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">5 linked devices</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">4× connection speed</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">HD streaming</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">24 hrs tech support</span>
+            </div>
+          </div>
+        </div>
+        <div class="price-section__item price-section__item_discount">
+          <h4 class="price-section__item-plan-name">永久计划</h4>
+          <h3 class="price-section__item-plan-mon">
+            40<span class="price-section__item-plan-mon-char">¥</span>/200GB
+          </h3>
+          <div class="price-section__item-discount-info">
+            <div class="price-section__item-discount-border price-section__item-discount-border_left">
+              <img src="./images/icons/discount-border.svg" alt="#">
+            </div>
+            <div class="price-section__item-discount-info-inner">Save 59%</div>
+            <div class="price-section__item-discount-border price-section__item-discount-border_right">
+              <img src="./images/icons/discount-border.svg" alt="#">
+            </div>
+          </div>
+          <h5 class="price-section__item-plan-year">50.00/CNY</h5>
+          <div class="price-section__item-list">
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">Anonymity</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">Encryption</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">Advertisement free</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">30+ virtual locations</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">5 linked devices</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">4× connection speed</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">HD streaming</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">24 hrs tech support</span>
+            </div>
+          </div>
+          <div class="price-section__btn-container">
+            <button class="price-section__btn button button_large">
+              Pay
+            </button>
+          </div>
+        </div>
+        <div class="price-section__item">
+          <h4 class="price-section__item-plan-name">永久计划</h4>
+          <h3 class="price-section__item-plan-mon">
+            120<span class="price-section__item-plan-mon-char">¥</span>/800GB
+          </h3>
+          <div class="price-section__item-list">
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">Anonymity</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">Encryption</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">Advertisement</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">1 virtual locations</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">1 linked devices</span>
+            </div>
+            <div class="price-section__benefit">
+              <img class="price-section__benefit-icon" src="./images/icons/checkbox.svg" alt="check">
+              <span class="price-section__benefit-text">HD streaming</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+      </div>
+      <h3 class="feedback-section__sub-title">
+        世界各地的人们都对 猴急加速器 赞不绝口
+      </h3>
+      <div class="feedback-section__rate-list">
+        <div class="feedback-section__rate-item">
+          <div class="feedback-section__rate-item-name">
+            App Store
+          </div>
+          <div class="feedback-section__rate-item-score">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/half-star.svg" alt="#">
+          </div>
+          <div class="feedback-section__rate-item-value">
+            4.6
+          </div>
+        </div>
+        <div class="feedback-section__rate-item">
+          <div class="feedback-section__rate-item-name">
+            Google Play
+          </div>
+          <div class="feedback-section__rate-item-score">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/half-star.svg" alt="#">
+          </div>
+          <div class="feedback-section__rate-item-value">
+            4.5
+          </div>
+        </div>
+        <div class="feedback-section__rate-item">
+          <div class="feedback-section__rate-item-name">
+            Microsoft Store
+          </div>
+          <div class="feedback-section__rate-item-score">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/star-icon.svg" alt="#">
+            <img src="images/icons/half-star.svg" alt="#">
+          </div>
+          <div class="feedback-section__rate-item-value">
+            4.6
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feedback-section__browsing">
+      <div class="feedback-section__browsing-inner">
+        <div class="feedback-section__browsing-block">
+          <div class="feedback-section__browsing-title">
+            <span>30秒无限制浏览！!</span>
+          </div>
+          <h4 class="feedback-section__browsing-desc">
+            尝试 TOUCH VPN，无风险，无限制地享受互联网 
+			<br />
+          </h4>
+          <div class="feedback-section__btn-container">
+            <a href="index.html#" target="_blank" class="button button_large js--app-link">
+              下载客户端
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <img class="footer__logo-icon" src="images/logo.svg" alt="logo" />
+          <div class="footer__logo-name">
+            猴急加速器
+          </div>
+        </div>
+        <div class="footer__links">
+          <a href="https://apps.apple.com/app/touch-vpn/id1239822785?ls=1"
+            class="footer__links-item js--download-app-link" target="_blank">
+            <img src="images/icons/apple.svg" alt="Mac">
+            <span class="footer__links-item-name">Mac</span>
+          </a>
+          <a href="https://apps.apple.com/app/touch-vpn-unlimited-proxy/id991744383?ls=1"
+            class="footer__links-item js--download-app-link" target="_blank">
+            <img src="images/icons/apple.svg" alt="IOS">
+            <span class="footer__links-item-name">ios</span>
+          </a>
+          <a href="https://apps.apple.com/app/touch-vpn/id1239822785?ls=1"
+            class="footer__links-item js--download-app-link" target="_blank">
+            <img src="images/icons/ms-store.svg" alt="MS Store">
+            <span class="footer__links-item-name">Microsoft</span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.northghost.touchvpn"
+            class="footer__links-item js--download-app-link" target="_blank">
+            <img src="images/icons/android.svg" alt="Play Store">
+            <span class="footer__links-item-name">Google</span>
+          </a>
+
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__privacy-links">
+          <a class='footer__privacy-links-item' href='https://www.touchvpn.net/terms-and-policies' id='terms' target='_blank'>Terms &
+            Policies</a>
+          <a class='footer__privacy-links-item' href='https://www.touchvpn.net/privacy-policy' id='privacy' target='_blank'>Privacy
+            policy</a>
+          <a class='footer__privacy-links-item footer__privacy-links-links-item-with-img' href='https://www.touchvpn.net/privacy-choices' id='privacy_choice' target='_blank'><span>Your
+              Privacy Choices</span><img src="images/icons/privacy-options.svg" alt="privacy-options"></a>
+          <a id="contact" href="mailto:support@pango.co" class="footer__privacy-links-item">Contact Us</a>
+        </div>
+        <div class="footer__copyright">
+          Copyright © <span id="current-year">2023</span> 猴急加速器 保留所有权利
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <div id="cookies" class="cookies">
+    <div class="cookies__inner">
+      <div class="cookies__text">
+        We use cookies to give you the best experience on our website. By using this website, you agree with our use of
+        cookies. You can <a target="_blank"
+           href="https://www.pango.co/privacy/?vh=extd71cfa30-77c3-11ea-b62a-67431c1b7647">view our
+          policies</a> here.
+      </div>
+      <button id="cookies-ok" class="cookies__btn">OK</button>
+    </div>
+  </div> -->
+  <script src="dist/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"
+    integrity="sha384-bBA4AXTbHvM49vkvht70Nf2uKCLZDFExrV3gjGxwYs3jde/Dh3KrGy31TrjIuSgd"
+    crossorigin="anonymous"></script>
+  <script>
+    let scrollTrigger = 60;
+    window.onscroll = () => {
+      // We add pageYOffset for compatibility with IE.
+      if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+        document.getElementsByTagName("header")[0].style.backgroundColor = '#f6f8ff';
+      } else {
+        document.getElementsByTagName("header")[0].style.backgroundColor = 'transparent';
+      }
+    };
+    document.getElementById('current-year').innerText = new Date().getFullYear().toString();
+  </script>
+</body>
+
+</html>
